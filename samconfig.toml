@@ -1,0 +1,10 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "soda-app"
+resolve_s3 = true
+s3_prefix = "soda-app"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_NAMED_IAM"
+parameter_overrides = "ReadCapacityUnits=\"5\" WriteCapacityUnits=\"5\" ScannedInvoicesBucketNamePrefix=\"scanned-invoices\" InvoiceAnalysesBucketNamePrefix=\"invoice-analyses\" ProcessedInvoicesBucketNamePrefix=\"processed-invoices\" PostgresInstanceHostDns=\"none\" PostgresInstanceHost=\"0.0.0.0\" PostgresInstanceUser=\"postgres\" PostgresInstancePassword=\"set_password\" PostgresInstanceDatabase=\"postgres\""
+image_repositories = []
